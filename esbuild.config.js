@@ -10,8 +10,8 @@ const { sassPlugin } = require("esbuild-sass-plugin");
         outdir: ".",
         plugins: [ sassPlugin() ],
         bundle: true,
-        minify: false,
-        sourcemap: true,
-        watch: true
+        minify: true,
+        sourcemap: false,
+        watch: false
     });
 })();
