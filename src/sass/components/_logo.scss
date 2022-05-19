@@ -1,0 +1,12 @@
+@use '../theme' as *;
+
+.logo {
+    padding: .5rem;
+
+    clip-path: circle(50%);
+
+    width: 8rem;
+    height: auto;
+
+    background-color: $secondary-text-color;
+}

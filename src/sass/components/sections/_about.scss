@@ -1,0 +1,76 @@
+@use '../../theme' as *;
+
+section#about {
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    & * {
+        color: $secondary-text-color;
+
+        text-shadow: 1px 1px 0 black;
+    }
+    
+    & > div {
+        &::after {
+            content: '';
+            position: absolute;
+
+            background-color: darken($secondary-text-color, 25%);
+
+            box-shadow: 1px 1px 0 black;
+
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 50%;
+
+            height: .25rem;
+
+            transform: translateY(250%) scaleX(100%);
+
+            @keyframes extend {
+                from {
+                    transform: translateY(250%) scaleX(0%);
+                }
+            }
+
+            animation: extend 1s ease-in-out;
+        }
+
+        & > h1 {
+            font-weight: 300;
+
+            font-size: 3rem;
+
+            transform: translateY(0%);
+
+            @keyframes main-text-fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(-200%);
+                }
+            }
+
+            animation: main-text-fade-in 1s;
+        }
+
+        & > h2 {
+            transform: translateY(0%);
+
+            @keyframes alt-text-fade-in {
+                from {
+                    opacity: 0;
+                    transform: translateY(200%);
+                }
+            }
+
+            animation: alt-text-fade-in 1s;
+        }
+    }
+}

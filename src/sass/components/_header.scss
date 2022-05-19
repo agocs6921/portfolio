@@ -1,0 +1,33 @@
+@use '../theme' as *;
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    $gap: 1rem;
+
+    padding-left: $gap;
+
+    display: flex;
+    justify-content: space-between;
+
+    top: 1rem;
+
+    height: auto;
+
+    & > nav {
+        flex-basis: 80%;
+
+        margin-left: $gap;
+
+        background-color: $quaternary-color;
+
+        $border-radius: 1rem;
+
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+}

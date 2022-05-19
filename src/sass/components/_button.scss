@@ -1,0 +1,39 @@
+@use '../theme' as *;
+
+.btn {
+    $bg-color: mix($primary-color, white, 20%);
+    //$darker-bg-color: mix($primary-color, white, 25%);
+    $font-color: invert($bg-color);
+    $border-radius: .25rem;
+
+    color: $font-color;
+
+    font-size: 1.5rem;
+
+    padding: 1rem 3rem;
+
+    border-radius: $border-radius;
+
+    &::after {
+        content: '';
+        position: absolute;
+
+        background-color: $bg-color;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+    
+        height: .35rem;
+
+        transition: transform 200ms;
+        transform: translateY(-180%) scaleX(0%);
+    }
+
+    &:hover {
+
+        &::after {
+            transform: translateY(-180%) scaleX(75%);
+        }
+    }
+}
