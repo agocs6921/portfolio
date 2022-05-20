@@ -1,5 +1,16 @@
 const { build } = require("esbuild");
 const { sassPlugin } = require("esbuild-sass-plugin");
+const { argv } = require("process")
+
+const STATE = argv[2] == "dev" ? {
+    minify: false,
+    sourcemap: true,
+    watch: true
+} : {
+    minify: true,
+    sourcemap: false,
+    watch: false
+};
 
 (async () => {
     await build({
@@ -8,10 +19,10 @@ const { sassPlugin } = require("esbuild-sass-plugin");
             "./public/css/styles": "./src/sass/styles.scss"
         },
         outdir: ".",
-        plugins: [ sassPlugin() ],
+        plugins: [
+            sassPlugin()
+        ],
         bundle: true,
-        minify: true,
-        sourcemap: false,
-        watch: false
+        ...STATE
     });
 })();

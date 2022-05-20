@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../src/sass/_resets.scss", "../../src/sass/components/_background.scss", "../../src/sass/components/_header.scss", "../../src/sass/theme/_colors.scss", "../../src/sass/components/_logo.scss", "../../src/sass/components/_navbar.scss", "../../src/sass/components/_button.scss", "../../src/sass/components/sections/_about.scss", "../../src/sass/components/sections/_projects.scss", "../../src/sass/components/sections/_contacts.scss", "../../src/sass/components/_card.scss"],
-  "sourcesContent": [null, null, null, null, null, null, null, null, null, null, null],
-  "mappings": ";AAAA;AACI;AAEA;AACA;;AAGJ;;;AAGI;AACA;AAEA;AACA;AAEA;AAEA;AAEA;;;;;;ACpBJ;AACI;AACA;AACA;AACA;AACA;;ACHJ;AACI;AACA;AACA;AAEA;AAIA;AAEA;AACA;AAEA;AAEA;;AAEA;AACI;AAEA;AAEA;AAIA;AACA;;AE5BR;AACI;AAEA;AAEA;AACA;AAEA;;ACRJ;AACI;;AAEA;AACI;AAEA;AAEA;AACA;AAEA;;AAEA;AACI;;ACdZ;AAMI;AAEA;AAEA;AAEA;;AAEA;AACI;AACA;AAEA;AAEA;AACA;AACA;AAEA;AAEA;AACA;;AAKA;AACI;;ACjCZ;AACI;AAEA;AAEA;AACA;AAEA;;AAEA;AACI;AAEA;;AAIA;AACI;AACA;AAEA;AAEA;AAEA;AACA;AACA;AACA;AAEA;AAEA;AAQA;;AANA;;AAEQ;;;AAOZ;AACI;AAEA;AAEA;AASA;;AAPA;;AAEQ;AACA;;;AAOZ;AACI;AASA;;AAPA;;AAEQ;AACA;;;AClEpB;AACI;AACA;;AAEA;AACI;;AAGJ;AACI;;AAGJ;AACI;;AAEA;AACI;;AChBZ;AACI;AAEA;AAEA;AAEA;AAGA;;AAEA;AACI;;AAGJ;AACI;;ACnBR;AACI;AAEA;AAEA;AACA;;AAEA;AACI;AACA;AAEA;AAEA;AAEA;;AAGJ;AACI;AACA;AAEA;AAEA;AAEA;;AAGJ;AACI;;",
-  "names": []
-}
