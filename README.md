@@ -1,7 +1,7 @@
 # Portfólióm
 
 ## Hogyan kell telepíteni?
----
+
 ### Szükséges csomagok telepítése
 ```
 $ npm install
