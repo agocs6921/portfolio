@@ -1,20 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import { createRoot } from "react-dom/client"
-import Background from "./components/background"
-import Logo from "./components/logo"
-import Card from "./components/card"
-import Contact from "./components/contact"
+import Background from "./components/Background"
+import Logo from "./components/Logo"
+import Card from "./components/Card"
+import Contact from "./components/Contact"
+import Modal from "./components/Modal"
+import Show from "./utils/Show"
 
 function App() {
+    const [ modalVisible, setModalVisible ] = useState(false)
+    const [ preview, setPreview ] = useState("")
+
     return <>
         <Background/>
+        <Show when={modalVisible} >
+            <Modal onClose={ () => setModalVisible(false) } />
+        </Show>
         <header>
             <Logo />
             <nav className="navbar">
                 <ul>
-                    <li><a className="btn" href="#about">Rólam</a></li>
-                    <li><a className="btn" href="#projects">Projektek</a></li>
-                    <li><a className="btn" href="#contacts">Elérhetőség</a></li>
+                    <li><a className="nav-link" href="#about">Rólam</a></li>
+                    <li><a className="nav-link" href="#projects">Projektek</a></li>
+                    <li><a className="nav-link" href="#contacts">Elérhetőség</a></li>
                 </ul>
             </nav>
         </header>
@@ -22,22 +30,19 @@ function App() {
             <section id="about">
                 <div>
                     <h1>Agócs Kevin</h1>
-                    <h2>Videojáték-, webfejlesztő és programozó</h2>
+                    <h2>Videojáték- és webfejlesztő, programozó</h2>
                 </div>
             </section>
             <section id="projects">
-                <h1>Projektek</h1>
-                <div className="grid">
-                    <Card title="Béla labirintus" background="./img/bela-maze.png" href="https://github.com/agocs6921/bela-maze" />
-                </div>
+                <Card title="Béla labirintus" background="./img/bela-maze.png" href="https://github.com/agocs6921/bela-maze" {...{ setModalVisible, setPreview }} />
             </section>
             <section id="contacts">
-                <Contact href="mailto:ismeretlen1024@gmail.com" icon="./img/email.svg" />
-                <Contact href="https://github.com/agocs6921/" icon="./img/github.svg" />
+                
             </section>
         </main>
         <footer>
-
+            <Contact href="mailto:ismeretlen1024@gmail.com" icon="./img/email.svg" />
+            <Contact href="https://github.com/agocs6921/" icon="./img/github.svg" />
         </footer>
     </>
 }

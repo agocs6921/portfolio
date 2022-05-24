@@ -1,11 +1,11 @@
-@use '../theme' as *;
+@use '../../theme' as *;
 
 header {
     position: absolute;
     left: 0;
     right: 0;
 
-    z-index: 9999;
+    z-index: 1000;
 
     $gap: 1rem;
 

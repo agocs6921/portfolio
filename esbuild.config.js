@@ -15,7 +15,7 @@ const STATE = argv[2] == "dev" ? {
 (async () => {
     await build({
         entryPoints: {
-            "./public/js/bundle": "./src/app.tsx",
+            "./public/js/bundle": "./src/App.tsx",
             "./public/css/styles": "./src/sass/styles.scss"
         },
         outdir: ".",
